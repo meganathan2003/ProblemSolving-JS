@@ -1,8 +1,10 @@
+
 /**
- * Below the code for solve the number game
- * using js
+ *  Below the code for solve the number game
+ * using js 
  * 
- * @author meganathan
+ * @param {*} nums 
+ * @returns 
  */
 
 var numberGame = function (nums) {
