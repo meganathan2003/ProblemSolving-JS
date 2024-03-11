@@ -12,6 +12,11 @@ let mostWordsFound = function (sentences) {
         let wordCount = 0;
         for (let i = 0; i < sentences.length; i++) {
             let currentWords = sentences[i];
+            /**
+             * Here spilt method is used for find the
+             * space between the arrays elements and it returnn 
+             * the sepreate array elements
+             */
             let count = currentWords.split(" ").length;
             if (count > wordCount) {
                 wordCount = count;

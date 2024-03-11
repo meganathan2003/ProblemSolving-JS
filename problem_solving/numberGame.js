@@ -12,6 +12,10 @@ var numberGame = function (nums) {
     console.log(numb);
     let arr = []
     while (numb.length) {
+        /**
+         * Here pop method remove the last element and
+         * replace the another one
+         */
         let alice = numb.pop()
         let bob = numb.pop()
         arr.push(bob, alice)
