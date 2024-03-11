@@ -13,7 +13,7 @@ let smallerNumbersThanCurrent = function (nums) {
         let count = 0;
         let currentNumber = nums[i]; // 0
         for (let j = 0; j < nums.length; j++) {
-            if (nums[j] < currentNumber) { //  2 < 
+            if (nums[j] < currentNumber) { //  2 < 6
                 count++;
             }
         }
