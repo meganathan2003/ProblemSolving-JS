@@ -5,19 +5,31 @@
  * @author meganathan
  */
 
-let merge = function (nums1, m, nums2, n) {
+function merge(nums1, m, nums2, n) {
+   
+    /**
+     * splice() method will remove the element in
+     * the array and it take the index postion from 
+     * start to end and  ... means spread operator 
+     * it is the new feature of ES8 moudle it will concat
+     * the two array
+     */
+    let merged = [...nums1.slice(0, m), ...nums2.slice(0, n)];
 
-    // Below the logic
-    if (!nums1.length && m != 0 && !nums2.length && n != 0) {
-        for (let i = 0; i < nums1.length - 1; i++) {
-            if (nums1[i] <= nums2[i]) { // 1 < 2
-                nums1[i + 1] = nums2[i];
-            }
+   
+    merged.sort((a, b) => a - b);
 
-
-        }
+    // Copy the sorted merged array back to nums1
+    for (let i = 0; i < m + n; i++) {
+        nums1[i] = merged[i];
     }
-
 }
 
-console.log(merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3));
+// Example usage
+let nums1 = [1, 2, 3, 0, 0, 0];
+let m = 3;
+let nums2 = [2, 5, 6];
+let n = 3;
+
+merge(nums1, m, nums2, n);
+console.log(nums1); // Output: [1, 2, 2, 3, 5, 6]
