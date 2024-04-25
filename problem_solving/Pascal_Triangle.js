@@ -10,16 +10,19 @@
 
 function generatePascalsTriangle(numRows) {
     if (numRows <= 0) return [];
-    let triangle = [[1]];
-    for (let i = 1; i < numRows; i++) {
-        let prevRow = triangle[i - 1];
-        let newRow = [];
+    let triangle = [[1]]; // [[1]]
+    for (let i = 1; i < numRows; i++) { // i = 1 ; 1 < 5
+        let prevRow = triangle[i - 1]; // triangle[ 1 - 1] = [1]
+        console.log(prevRow);
+        let newRow = []; // [1]
         newRow[0] = 1;
-        for (let j = 1; j < prevRow.length; j++) {
-            newRow[j] = prevRow[j - 1] + prevRow[j];
+        console.log(newRow);
+        for (let j = 1; j < prevRow.length; j++) { // 1 < 1 
+            newRow[j] = prevRow[j - 1] + prevRow[j]; // [1] = [1 - 1] + prevRow[1]
         }
         newRow.push(1);
-        triangle.push(newRow);
+        console.log(newRow);
+        triangle.push(newRow);git 
     }
     return triangle;
 }
