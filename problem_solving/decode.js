@@ -16,4 +16,4 @@ let decode = function (encoded, first) {
 
 }
 
-console.log(decode([1, 2, 3], 1));
+// console.log(decode([1, 2, 3], 1));
